@@ -3,28 +3,21 @@
 /**
  * Http related classes
  */
-import Middleware from './http/Middleware';
-// export class Middleware;
+export { Middleware} from './http/Middleware';
+export { Server } from './http/Server';
 
-import Server from './http/Server';
-// export class Server
 
 
 /**
  * Routing
  */
-import ExpressRouter from './routing/ExpressRouter';
-// export class ExpressRouter
-
-import ReactRenderer from './routing/ReactRenderer';
-// export class ReactRenderer
-
-import RouteRegister from './routing/RouteRegister';
-// export class RouteRegister
+export { ExpressRouter } from './routing/ExpressRouter';
+export { ReactRenderer } from './routing/ReactRenderer';
+export { RouteRegister } from './routing/RouteRegister';
 
 
 /**
  * Storage/Databases
  */
-import MariaDB from './storage/MariaDB';
-// export class MariaDB
+export { MariaDB } from './storage/MariaDB';
+
