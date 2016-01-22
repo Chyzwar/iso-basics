@@ -3,26 +3,26 @@
 /**
  * Http related classes
  */
-export { default as Middleware} from './http/Middleware';
-export { default as Server } from './http/Server';
+export { default as Middleware} from './Middleware';
+export { default as Server } from './Server';
 
 
 /**
  * Routing
  */
-export { default as ExpressRouter } from './routing/ExpressRouter';
-export { default as RouteRegister } from './routing/RouteRegister';
+export { default as ExpressRouter } from './ExpressRouter';
+export { default as RouteRegister } from './RouteRegister';
 
 
 /**
  * Storage/Databases
  */
-export { default as MariaDB } from './storage/MariaDB';
-export {  default as S3Object} from './storage/MariaDB';
+export { default as MariaDB } from './MariaDB';
+export {  default as S3Object} from './S3Object';
 
 
 /**
  * Rendering and frontend
  */
-export { default as Component } from './render/Component';
-export { default as ReactRenderer } from './render/ReactRenderer';
+export { default as Component } from './Component';
+export { default as ReactRenderer } from './ReactRenderer';

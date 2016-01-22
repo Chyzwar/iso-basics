@@ -2,7 +2,7 @@
   "name": "isomorphic-es6",
   "description": "",
   "version": "0.2.2",
-  "main": "lib/index.js",
+  "main": "lib/",
   "author": "Marcin Kopacz <Chyzwar>",
   "repository": "/isomorphic",
   "license": "MIT",
