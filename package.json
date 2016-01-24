@@ -1,7 +1,7 @@
 {
   "name": "isomorphic-es6",
   "description": "",
-  "version": "0.2.2",
+  "version": "0.2.5",
   "main": "lib/",
   "author": "Marcin Kopacz <Chyzwar>",
   "repository": "/isomorphic",
@@ -30,6 +30,9 @@
     "express": "^4.13.3",
     "mysql": "^2.10.2",
     "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
     "sequelize": "^3.17.3",
     "sequelize-cli": "^2.3.1"
   }

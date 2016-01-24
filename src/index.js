@@ -24,5 +24,4 @@ export {  default as S3Object} from './S3Object';
 /**
  * Rendering and frontend
  */
-export { default as Component } from './Component';
 export { default as ReactRenderer } from './ReactRenderer';
