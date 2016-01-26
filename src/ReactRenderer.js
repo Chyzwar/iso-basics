@@ -7,8 +7,7 @@ export default class ReactRenderer {
     this.type = 'react';
   }
 
-  render(Page, Store, Reducer) {
-    const reducer = new Reducer();
+  render(Page, Store, reducer) {
     const pageStore = new Store(reducer);
 
     return renderToString(
