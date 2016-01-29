@@ -1,7 +1,7 @@
 {
   "name": "isomorphic-es6",
   "description": "",
-  "version": "0.2.7",
+  "version": "0.2.11",
   "main": "lib/",
   "author": "Marcin Kopacz <Chyzwar>",
   "repository": "/isomorphic",

@@ -1,6 +1,8 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+
 import { Provider } from 'react-redux';
+import { createStore } from 'redux'
 
 export default class ReactRenderer {
   constructor() {
@@ -8,12 +10,21 @@ export default class ReactRenderer {
   }
 
   render(Page, Store, reducer) {
-    const pageStore = new Store(reducer);
 
-    return renderToString(
-      <Provider store={pageStore.store}>
-        <Page />
-      </Provider>
-    );
+    return new Promise((resolve, reject) => {
+      new Store().getData().then((initState) => {
+        console.log(initState, 'initState');
+        const pageStore = createStore(reducer, initState);
+
+        let page = renderToString(
+          <Provider store={pageStore}>
+            <Page />
+          </Provider>
+        );
+        console.log(page, 'page');
+        resolve(page);
+      });
+    });
+
   }
 }

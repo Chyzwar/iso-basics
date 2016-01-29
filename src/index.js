@@ -25,3 +25,4 @@ export {  default as S3Object} from './S3Object';
  * Rendering and frontend
  */
 export { default as ReactRenderer } from './ReactRenderer';
+export { default as StoreRenderer } from './StoreRenderer';
