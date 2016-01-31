@@ -1,5 +1,7 @@
-import React from 'react';
+import { React } from 'react';
 import { renderToString } from 'react-dom/server';
+
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 export default class ReactRenderer {
@@ -8,12 +10,22 @@ export default class ReactRenderer {
   }
 
   render(Page, Store, reducer) {
-    const pageStore = new Store(reducer);
+    const promise = new Promise(
 
-    return renderToString(
-      <Provider store={pageStore.store}>
-        <Page />
-      </Provider>
-    );
+      (resolve) => {
+        new Store().getData().then(
+
+          (initState) => {
+            const pageStore = createStore(reducer, initState);
+            const page = renderToString(
+              <Provider store={pageStore}>
+                <Page />
+              </Provider>
+            );
+            resolve(page);
+          });
+      });
+
+    return promise;
   }
 }
