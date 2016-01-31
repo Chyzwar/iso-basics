@@ -1,5 +1,5 @@
-import { React } from 'react';
-import { renderToString } from 'react-dom/server';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -10,22 +10,25 @@ export default class ReactRenderer {
   }
 
   render(Page, Store, reducer) {
-    const promise = new Promise(
+    const promise = new Store().getData();
 
-      (resolve) => {
-        new Store().getData().then(
-
-          (initState) => {
-            const pageStore = createStore(reducer, initState);
-            const page = renderToString(
-              <Provider store={pageStore}>
-                <Page />
-              </Provider>
-            );
-            resolve(page);
-          });
-      });
+    promise.then((initState) => {
+      const pageStore = createStore(reducer, initState);
+      console.log(initState, 'initState');
+      return this.renderPage(pageStore, Page);
+    }).catch((err) => {
+      console.log(err, 'error');
+    });
 
     return promise;
+  }
+
+  renderPage(store, Page) {
+    const page = ReactDOMServer.renderToString(
+     <Provider store={store}>
+      <Page/>
+    </Provider>);
+
+    return `<!doctype html> ${page}`;
   }
 }

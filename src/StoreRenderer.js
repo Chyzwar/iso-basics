@@ -5,16 +5,7 @@ class StoreRenderer {
   }
 
   render(Store) {
-    const promise = new Promise(
-      (resolve) => {
-        new Store().getData().then(
-          (initState) => {
-            resolve(initState);
-          });
-      }
-    );
-
-    return promise;
+    return new Store().getData();
   }
 }
 
