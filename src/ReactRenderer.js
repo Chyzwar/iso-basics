@@ -12,17 +12,16 @@ export default class ReactRenderer {
   render(Page, storeFunction, reducer) {
     let promise = storeFunction();
 
-    promise.then((initState) => {
-      const pageStore = createStore(reducer, initState);
-      const page = ReactDOMServer.renderToString(
-        <Provider store={pageStore}>
-          <Page/>
-        </Provider>
-      );
+    return promise
+      .then((initState) => {
+        const pageStore = createStore(reducer, initState);
+        const page = ReactDOMServer.renderToString(
+          <Provider store={pageStore}>
+            <Page/>
+          </Provider>
+        );
 
-      return `<!doctype html> ${page}`;
-    });
-
-    return promise;
+        return `<!doctype html> ${page}`;
+      });
   }
 }
