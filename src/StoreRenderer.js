@@ -4,8 +4,8 @@ class StoreRenderer {
     this.type = 'store';
   }
 
-  render(Store) {
-    return new Store().getData();
+  render(store) {
+    return new store();
   }
 }
 

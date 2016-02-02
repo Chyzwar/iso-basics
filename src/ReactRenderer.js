@@ -9,26 +9,20 @@ export default class ReactRenderer {
     this.type = 'react';
   }
 
-  render(Page, Store, reducer) {
-    const promise = new Store().getData();
+  render(Page, storeFunction, reducer) {
+    let promise = storeFunction();
 
     promise.then((initState) => {
       const pageStore = createStore(reducer, initState);
-      console.log(initState, 'initState');
-      return this.renderPage(pageStore, Page);
-    }).catch((err) => {
-      console.log(err, 'error');
+      const page = ReactDOMServer.renderToString(
+        <Provider store={pageStore}>
+          <Page/>
+        </Provider>
+      );
+
+      return `<!doctype html> ${page}`;
     });
 
     return promise;
-  }
-
-  renderPage(store, Page) {
-    const page = ReactDOMServer.renderToString(
-     <Provider store={store}>
-      <Page/>
-    </Provider>);
-
-    return `<!doctype html> ${page}`;
   }
 }
