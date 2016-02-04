@@ -1,10 +1,10 @@
 {
-  "name": "isomorphic-es6",
+  "name": "iso-basics",
   "description": "",
   "version": "0.2.12",
   "main": "lib/",
   "author": "Marcin Kopacz <Chyzwar>",
-  "repository": "/isomorphic",
+  "repository": "/iso-basics",
   "license": "MIT",
   "scripts": {
     "compile": "babel src --out-dir lib",
