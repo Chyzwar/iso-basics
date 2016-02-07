@@ -1,12 +1,12 @@
 import express from 'express';
 
-export default class Server {
+export default class ExpressServer {
   constructor() {
 
     /**
-         * Create express.js instance
-         * @type {Object}
-         */
+    * Create express.js instance
+    * @type {Object}
+    */
     this.express = express();
   }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import buildStore from './buildStore';
 
 export default class ReactRenderer {
   constructor() {
@@ -10,7 +10,9 @@ export default class ReactRenderer {
   }
 
   render(Page, storeFunction, reducer) {
-    let promise = storeFunction();
+    const promise = buildStore(
+        storeFunction()
+      );
 
     return promise
       .then((initState) => {

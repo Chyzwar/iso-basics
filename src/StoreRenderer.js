@@ -1,11 +1,12 @@
+import buildStore from './buildStore.js';
 
 class StoreRenderer {
   constructor() {
     this.type = 'store';
   }
 
-  render(store) {
-    return new store();
+  render(storeFunction) {
+    return buildStore(storeFunction());
   }
 }
 
