@@ -1,13 +1,13 @@
-# isomorphic-es6
+# iso-basics
 
-![Build Status](https://img.shields.io/travis//isomorphic-es6.svg)
-![Coverage](https://img.shields.io/coveralls//isomorphic-es6.svg)
-![Downloads](https://img.shields.io/npm/dm/isomorphic-es6.svg)
-![Downloads](https://img.shields.io/npm/dt/isomorphic-es6.svg)
-![npm version](https://img.shields.io/npm/v/isomorphic-es6.svg)
-![dependencies](https://img.shields.io/david//isomorphic-es6.svg)
-![dev dependencies](https://img.shields.io/david/dev//isomorphic-es6.svg)
-![License](https://img.shields.io/npm/l/isomorphic-es6.svg)
+![Build Status](https://img.shields.io/travis//iso-basics.svg)
+![Coverage](https://img.shields.io/coveralls//iso-basics.svg)
+![Downloads](https://img.shields.io/npm/dm/iso-basics.svg)
+![Downloads](https://img.shields.io/npm/dt/iso-basics.svg)
+![npm version](https://img.shields.io/npm/v/iso-basics.svg)
+![dependencies](https://img.shields.io/david//iso-basics.svg)
+![dev dependencies](https://img.shields.io/david/dev//iso-basics.svg)
+![License](https://img.shields.io/npm/l/iso-basics.svg)
 
 
 
@@ -16,13 +16,13 @@
 Install it via npm:
 
 ```shell
-npm install isomorphic-es6
+npm install iso-basics
 ```
 
 And include in your project:
 
 ```javascript
-import isomorphic-es6 from 'isomorphic-es6';
+import iso-basics from 'iso-basics';
 ```
 
 ## License
