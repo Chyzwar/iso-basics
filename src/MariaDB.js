@@ -3,7 +3,6 @@ import process from 'process';
 import path from 'path';
 import fs from 'fs';
 
-
 export default class MariaDB {
   constructor(config) {
     this.config = config;
@@ -15,11 +14,11 @@ export default class MariaDB {
         host: config.host,
         dialect: 'mariadb',
 
-        pool:{
+        pool: {
           max: config.pool.max || 5,
           min: config.pool.max || 0,
-          idle: config.pool.idle || 1000
-        }
+          idle: config.pool.idle || 1000,
+        },
       });
   }
 
@@ -27,7 +26,7 @@ export default class MariaDB {
    * Publish DB Connection to global object
    * @param  {String} name
    */
-  publishGlobal(name='maria') {
+  publishGlobal(name = 'maria') {
     global[name] = this.connection;
   }
 
@@ -35,10 +34,10 @@ export default class MariaDB {
    * Relative path to model dir
    * @param  {String} modelsDir
    */
-  importModels(modelsDir){
-    let srcPath = path.join(process.cwd(), './src');
-    let searchDir = path.join(srcPath, modelsDir);
-    console.log(searchDir);
+  importModels(modelsDir) {
+    const srcPath = path.join(process.cwd(), './src');
+    const searchDir = path.join(srcPath, modelsDir);
+
     fs.readdirSync(searchDir)
       .forEach((file) => {
         this.connection.import(path.join(searchDir, file));

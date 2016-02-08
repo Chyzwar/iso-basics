@@ -3,8 +3,9 @@
 /**
  * Http related classes
  */
-export { default as Middleware} from './Middleware';
-export { default as Server } from './Server';
+export { default as Middleware } from './Middleware';
+export { default as ExpressServer } from './ExpressServer';
+export { default as WinstonExpress } from './WinstonExpress';
 
 /**
  * Routing
@@ -23,3 +24,4 @@ export { default as S3Object } from './S3Object';
  */
 export { default as ReactRenderer } from './ReactRenderer';
 export { default as StoreRenderer } from './StoreRenderer';
+

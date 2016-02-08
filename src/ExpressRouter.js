@@ -1,9 +1,11 @@
 import { Router } from 'express';
 import Middleware from './Middleware';
 
-export default class ExpressRouter extends Middleware {
+const router = new Router();
+
+class ExpressRouter extends Middleware {
   constructor(path, renderer) {
-    super(path, Router());
+    super(path, router);
     this.renderer = renderer;
   }
 
@@ -11,3 +13,5 @@ export default class ExpressRouter extends Middleware {
     return this.renderer.render(...options);
   }
 }
+
+export default ExpressRouter;
