@@ -3,7 +3,7 @@ import process from 'process';
 import path from 'path';
 import fs from 'fs';
 
-export default class MariaDB {
+class SequelizeDB {
   constructor(config) {
     this.config = config;
     this.connection = new Sequelize(
@@ -26,7 +26,7 @@ export default class MariaDB {
    * Publish DB Connection to global object
    * @param  {String} name
    */
-  publishGlobal(name = 'maria') {
+  publishAsGlobal(name = 'seq') {
     global[name] = this.connection;
   }
 
@@ -44,3 +44,5 @@ export default class MariaDB {
       });
   }
 }
+
+export default SequelizeDB;

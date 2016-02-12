@@ -16,7 +16,8 @@ export { default as RouteRegister } from './RouteRegister';
 /**
  * Storage/Databases
  */
-export { default as MariaDB } from './MariaDB';
+export { default as SequaliseDB } from './SequaliseDB';
+export { default as BookshelfDB } from './BookshelfDB';
 export { default as S3Object } from './S3Object';
 
 /**

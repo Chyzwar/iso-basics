@@ -11,6 +11,10 @@ class WinstonExpress extends Middleware {
     super(undefined, winstonMiddleware);
     this.logger = new Logger(options);
   }
+
+  publishAsGlobal(name = 'logger'){
+    global[name] = this.logger;
+  }
  }
 
 export default WinstonExpress;
