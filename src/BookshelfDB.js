@@ -4,7 +4,9 @@ import bookshelf from 'bookshelf';
 class BookshelfDB {
   constructor(config) {
     const { host, user, password, database } = config.connection;
-    const { charset='utf8' } = config.connection;
+    const { charset = 'utf8' } = config.connection;
+    const { min = 2, max = 10 } = config.pool;
+    const { tableName } = config.migrations;
 
     this.knex = knex({
       client: config.client,
@@ -13,8 +15,15 @@ class BookshelfDB {
         user,
         password,
         database,
-        charset
-      }
+        charset,
+      },
+      pool: {
+        min,
+        max,
+      },
+      migrations: {
+        tableName,
+      },
     });
 
     this.bookshelf = bookshelf(this.knex);
