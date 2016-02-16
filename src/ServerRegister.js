@@ -1,5 +1,5 @@
 
-export default class RouteRegister {
+class ServerRegister {
   constructor(register) {
     this.routes = this.buildRoutes(register);
   }
@@ -29,3 +29,5 @@ export default class RouteRegister {
     );
    }
   }
+
+export default ServerRegister;
