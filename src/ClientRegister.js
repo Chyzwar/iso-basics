@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-class ClientRegister{
-  constructor(register){
-    this.routes = buildRoutes(routes);
+class ClientRegister {
+  constructor(register) {
+    this.routes = this.buildRoutes(register);
   }
 
   /**
@@ -12,7 +12,7 @@ class ClientRegister{
    */
   [Symbol.iterator]() {
     return this.routes.values();
-  };
+  }
 
   /**
    * Build all client routes
@@ -21,7 +21,6 @@ class ClientRegister{
    */
   buildRoutes(register) {
     return register.map((routeParts) => {
-
       const path = routeParts[0];
       const Page = routeParts[1];
 
@@ -29,3 +28,5 @@ class ClientRegister{
     });
   }
 }
+
+export default ClientRegister;

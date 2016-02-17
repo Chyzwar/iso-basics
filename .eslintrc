@@ -1,21 +1,22 @@
 {
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "node": true
+    env: {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+
+    parserOptions: {
+      "sourceType": "module",
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        modules: true,
+        jsx: true
+      }
     },
 
     "globals": {
-
+      $: "true"
     },
 
-    "extends": "airbnb",
-
-    "ecmaFeatures": {
-        "modules": true,
-        "jsx": true
-    },
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["react"],
 }

@@ -11,12 +11,12 @@ export { default as WinstonExpress } from './WinstonExpress';
  * Routing
  */
 export { default as ExpressRouter } from './ExpressRouter';
-export { default as RouteRegister } from './RouteRegister';
+export { default as ServerRegister } from './ServerRegister';
 
 /**
  * Storage/Databases
  */
-export { default as SequaliseDB } from './SequaliseDB';
+export { default as SequelizeDB } from './SequelizeDB';
 export { default as BookshelfDB } from './BookshelfDB';
 export { default as S3Object } from './S3Object';
 

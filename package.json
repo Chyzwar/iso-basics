@@ -1,7 +1,7 @@
 {
   "name": "iso-basics",
   "description": "",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "main": "lib/",
   "author": "Marcin Kopacz <Chyzwar>",
   "repository": "/iso-basics",
@@ -18,24 +18,22 @@
   },
   "devDependencies": {
     "babel-cli": "*",
-    "babel-preset-es2015-node5": "*",
-    "babel-preset-react": "*",
-    "chai": "*",
-    "coveralls": "*",
-    "isparta": "*",
-    "mocha": "*",
-    "sinon": "*"
+    "babel-preset-node5": "*",
+    "babel-preset-react": "*"
   },
   "dependencies": {
-    "express": "^4.13.3",
-    "knex": "^0.10.0-rc1",
-    "mysql": "^2.10.2",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-redux": "^4.1.2",
-    "redux": "^3.1.6",
-    "sequelize": "^3.17.3",
-    "sequelize-cli": "^2.3.1",
-    "winston": "^2.1.1"
+    "bookshelf": "*",
+    "express": "*",
+    "knex": "*",
+    "mariasql": "*",
+    "mysql": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-redux": "*",
+    "react-router-redux": "^3.0.0",
+    "redux": "*",
+    "sequelize": "*",
+    "sequelize-cli": "*",
+    "winston": "*"
   }
 }
