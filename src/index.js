@@ -18,6 +18,7 @@ export { default as ServerRegister } from './ServerRegister';
  */
 export { default as SequelizeDB } from './SequelizeDB';
 export { default as BookshelfDB } from './BookshelfDB';
+export { default as RedisCache } from './RedisCache';
 export { default as S3Object } from './S3Object';
 
 /**
