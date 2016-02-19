@@ -30,11 +30,11 @@ class BookshelfDB {
   }
 
   /**
-   * Publish DB Connection to global object
-   * @param  {String} name
+   * Load Bookshelf Plugin
+   * @param  {string} pluginName
    */
-  publishAsGlobal(name = 'bookshelf') {
-    global[name] = this.bookshelf;
+  loadPlugin(pluginName){
+    this.bookshelf.plugin(pluginName);
   }
 }
 

@@ -1,6 +1,6 @@
 import express from 'express';
 
-export default class ExpressServer {
+class ExpressServer {
   constructor() {
 
     /**
@@ -49,3 +49,5 @@ export default class ExpressServer {
     });
   }
 }
+
+export default ExpressServer;
