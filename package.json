@@ -30,10 +30,15 @@
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
-    "react-router-redux": "^3.0.0",
+    "react-router-redux": "*",
     "redux": "*",
     "sequelize": "*",
     "sequelize-cli": "*",
     "winston": "*"
+  },
+  "optionalDependencies": {
+    "eslint": "*",
+    "eslint-plugin-react": "*",
+    "eslint-config-airbnb": "*"
   }
 }
