@@ -10,10 +10,16 @@ class WinstonExpress extends Middleware {
   constructor(options) {
     super(undefined, winstonMiddleware);
     this.logger = new Logger(options);
-  }
 
-  publishAsGlobal(name = 'logger'){
-    global[name] = this.logger;
+    /**
+     * Monkey path logger, add handler for log callback
+     * @param  {Number} code
+     */
+    this.logger.exitAfterFlush = function (code = 0) {
+      this.transports.file.on('flush', function() {
+        process.exit(code);
+    });
+    }
   }
  }
 
