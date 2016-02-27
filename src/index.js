@@ -4,6 +4,7 @@
  * Http related classes
  */
 export { default as Middleware } from './Middleware';
+export { default as Passport } from './Passport';
 export { default as ExpressServer } from './ExpressServer';
 export { default as WinstonExpress } from './WinstonExpress';
 

@@ -1,8 +1,8 @@
 
-class ReactClient{
+class Passport{
   constructor() {
 
   }
 }
 
-export default ReactClient;
+export default Passport;
