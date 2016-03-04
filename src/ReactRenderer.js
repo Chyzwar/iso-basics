@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import buildStore from './buildStore';
 
-export default class ReactRenderer {
+export default class ReduxRenderer {
   constructor() {
     this.type = 'react';
   }

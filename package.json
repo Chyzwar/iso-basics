@@ -22,6 +22,7 @@
     "babel-preset-react": "*"
   },
   "dependencies": {
+    "alt": "*",
     "bookshelf": "*",
     "express": "*",
     "knex": "*",
