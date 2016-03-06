@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "alt": "*",
+    "alt-react": "*",
     "bookshelf": "*",
     "express": "*",
     "knex": "*",
