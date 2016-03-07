@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import buildStore from './buildStore';
+import resolve from './utils/resolve';
 
 export default class ReduxRenderer {
   constructor() {
@@ -10,7 +10,7 @@ export default class ReduxRenderer {
   }
 
   render(Page, storeFunction, reducer) {
-    const promise = buildStore(
+    const promise = resolve(
         storeFunction()
       );
 

@@ -1,21 +1,24 @@
+import AltContainer from 'alt-container';
+import resolve from './utils/resolve';
 
-export default class AltRenderer {
+class AltRenderer {
   constructor() {
     this.type = 'alt';
   }
 
-  render(Page, storeFunction, reducer) {
-    const promise = buildStore(
-        storeFunction()
-      );
+  render(Page, bootsrap) {
+    const promise = resolve(bootstrap)
 
     return promise
-      .then((initState) => {
-        const pageStore = createStore(reducer, initState);
+      .then((stores) => {
         const page = ReactDOMServer.renderToString(
-            <Page flux={flux}/>
+          <AltContainer stores={stores}>
+            <Page />
+          </AltContainer>
         );
         return `<!doctype html> ${page}`;
       });
   }
 }
+
+export default AltRenderer;

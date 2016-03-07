@@ -1,5 +1,5 @@
 
-function buildStore(store) {
+function resolve(store) {
 
   const propList = [];
   const promiseList = [];
@@ -25,4 +25,4 @@ function buildStore(store) {
   return promise;
 }
 
-export default buildStore;
+export default resolve;
