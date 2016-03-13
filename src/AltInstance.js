@@ -2,7 +2,9 @@ import Alt from 'alt';
 
 class AltInstance extends Alt{
   constructor(){
-    this.added = "chuj"
+    super();
+
+    this.type = "alt"
   }
 }
 
