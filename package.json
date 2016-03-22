@@ -2,7 +2,7 @@
   "name": "iso-basics",
   "description": "",
   "version": "0.2.16",
-  "main": "lib/",
+  "main": "src/",
   "author": "Marcin Kopacz <Chyzwar>",
   "repository": "/iso-basics",
   "license": "MIT",
