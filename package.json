@@ -16,11 +16,6 @@
     "node": ">=5.0 <6",
     "npm": ">=3.3 <4"
   },
-  "devDependencies": {
-    "babel-cli": "*",
-    "babel-preset-node5": "*",
-    "babel-preset-react": "*"
-  },
   "dependencies": {
     "alt": "*",
     "alt-container": "*",
